@@ -1,0 +1,1 @@
+oc create configmap cheese-quizz-question-v1-config --from-file=application.properties
