@@ -20,7 +20,7 @@ metadata:
     app.openshift.io/runtime: quarkus
   annotations:
     app.openshift.io/vcs-ref: master
-    app.openshift.io/vcs-uri: 'https://github.com/lbroudoux/cheese-quizz'
+    app.openshift.io/vcs-uri: 'https://github.com/JulienBell/cheese-quizz'
 spec:
   strategy:
     type: Rolling
@@ -39,7 +39,7 @@ spec:
           - quizz-client
         from:
           kind: ImageStreamTag
-          namespace: cheese-quizz
+          namespace: cheese-quizz-demo
           name: 'cheese-quizz-client:latest'
   replicas: 1
   revisionHistoryLimit: 10
@@ -52,6 +52,7 @@ spec:
       labels:
         app: cheese-quizz-client
         deploymentconfig: cheese-quizz-client
+        maistra.io/expose-route: "true"
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "8080"
@@ -60,7 +61,7 @@ spec:
     spec:
       containers:
         - name: quizz-client
-          image: cheese-quizz/cheese-quizz-client:latest
+          image: cheese-quizz-demo/cheese-quizz-client:latest
           imagePullPolicy: Always
           env:
           - name: QUARKUS_PROFILE
