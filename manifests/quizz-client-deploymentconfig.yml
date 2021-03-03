@@ -40,7 +40,7 @@ spec:
         from:
           kind: ImageStreamTag
           namespace: cheese-quizz-dev
-          name: 'cheese-quizz-client-dev:latest'
+          name: 'cheese-quizz-client:latest'
   replicas: 1
   revisionHistoryLimit: 10
   test: false
