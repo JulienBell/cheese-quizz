@@ -39,8 +39,8 @@ spec:
           - quizz-client
         from:
           kind: ImageStreamTag
-          namespace: cheese-quizz-demo
-          name: 'cheese-quizz-client:latest'
+          namespace: cheese-quizz-dev
+          name: 'cheese-quizz-client-dev:latest'
   replicas: 1
   revisionHistoryLimit: 10
   test: false
@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
         - name: quizz-client
-          image: cheese-quizz-demo/cheese-quizz-client:latest
+          image: cheese-quizz-dev/cheese-quizz-client:latest
           imagePullPolicy: Always
           env:
           - name: QUARKUS_PROFILE

@@ -39,7 +39,7 @@ metadata:
   name: cheese-quizz-subscription
   namespace: cheese-quizz
 spec:
-  channel: githubcom-lbroudoux-cheese-quizz-ns/githubcom-lbroudoux-cheese-quizz
+  channel: githubcom-julienbell-cheese-quizz-ns/githubcom-julienbell-cheese-quizz
   placement:
     placementRef:
       kind: PlacementRule

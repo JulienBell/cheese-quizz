@@ -1,8 +1,8 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Channel
 metadata:
-  name: githubcom-lbroudoux-cheese-quizz
-  namespace: githubcom-lbroudoux-cheese-quizz-ns
+  name: githubcom-julienbell-cheese-quizz-gitops
+  namespace: githubcom-julienbell-cheese-quizz-gitops-ns
 spec:
-  pathname: 'https://github.com/lbroudoux/cheese-quizz.git'
+  pathname: 'https://github.com/JulienBell/cheese-quizz-gitops.git'
   type: Git
